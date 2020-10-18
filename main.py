@@ -44,7 +44,9 @@ def calculate_ig(data, x_label, y_label):
     y_array = data[y_label]
     y_values = list(set(y_array))
     ig_result = calculate_entropy(x_array)
+    # for each value of the y attribute
     for value in y_values:
+        # get the data on one side of the decision tree, the current node will have a y_values number of children
         x_partial_data = [x_array[i] for i in range(0, len(y_array)) if y_array[i] == value]
         ig_result -= len(x_partial_data) / len(x_array) * calculate_entropy(x_partial_data)
     return ig_result
