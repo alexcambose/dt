@@ -34,6 +34,7 @@ def calculate_entropy(data):
     entropy = 0
     for value in unique_values:
         count = data.count(value)
+        # entropy with the sum formula, with reversed log because of the -
         entropy += (count / data_length) * math.log2(data_length / count)
     return entropy
 
