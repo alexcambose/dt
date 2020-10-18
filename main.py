@@ -109,4 +109,7 @@ prediction = predict(tree, {
 })
 
 print(tree)
+# {'outlook': {'sunny': {'humidity': {'normal': 'yes', 'high': 'no'}}, 'overcast': 'yes', 'rainy': {'windy': {'weak': 'yes', 'strong': 'no'}}}}
+
 print(prediction)
+# no
